@@ -61,7 +61,7 @@ export const HomeScreen = observer(function HomeScreen() {
     }
   }
   return (
-    <Screen style={ROOT} preset="scroll">
+    <Screen style={ROOT} preset="scroll" >
       <Header headerTx={"homeScreen.header"} titleStyle={TEXT} />
       <View style={CONTAINER}>
         <TextInput

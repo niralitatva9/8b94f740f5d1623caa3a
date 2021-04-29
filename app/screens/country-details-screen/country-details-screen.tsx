@@ -28,7 +28,7 @@ const WEATHR: TextStyle = {
 const BUTTON: ViewStyle = {
   height: 45,
   margin: 40,
-  width: 200,
+  width: 300,
   borderRadius: 10,
 }
 const CONTAINER: ViewStyle = {
