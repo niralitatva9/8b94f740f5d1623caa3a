@@ -57,7 +57,7 @@ export const CountryDetailsScreen = observer(function CountryDetailsScreen() {
   return (
     <Screen style={ROOT} preset="scroll">
       <Header
-        headerText={"CountryDetails Screen"}
+        headerTx={"CountryDetailsScreen.header"}
         titleStyle={TEXT}
         leftIcon={"back"}
         onLeftPress={() => navigation.goBack()}
@@ -72,12 +72,12 @@ export const CountryDetailsScreen = observer(function CountryDetailsScreen() {
           <SvgUri uri={countryDetail.flag} height={50} width={50} />
         </View>
       </View>
-      <Button text={"Capital Weather"} textStyle={TEXT} style={BUTTON} onPress={onSubmit}>
+      <Button tx={"button.capitalWeather"} textStyle={TEXT} style={BUTTON} onPress={onSubmit}>
         {countryDetailsStore.isLoading && <ActivityIndicator color={color.palette.black} />}
       </Button>
       {weatherDetails && (
         <View>
-          <Text text={"Weather Details"} style={WEATHR} />
+          <Text tx={"CountryDetailsScreen.WeatherDetails"} style={WEATHR} />
           {renderText("Temperature", weatherDetails.temperature)}
           {renderText("Wind Speed", weatherDetails.wind_speed)}
           {renderText("Precip", weatherDetails.precip)}

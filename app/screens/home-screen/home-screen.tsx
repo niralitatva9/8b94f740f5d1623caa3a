@@ -13,6 +13,7 @@ import { Button, Header, Screen, Text } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 import { useStores } from "../../models"
 import { color } from "../../theme"
+import { translate } from "../../i18n"
 
 const ROOT: ViewStyle = {
   backgroundColor: color.palette.white,
@@ -56,22 +57,22 @@ export const HomeScreen = observer(function HomeScreen() {
     if (countryDetailsStore.countryDetail !== null) {
       navigation.navigate("countryDetail")
     } else {
-      Alert.alert("No Record Found!")
+      Alert.alert(translate("errors.invalid"))
     }
   }
   return (
     <Screen style={ROOT} preset="scroll">
-      <Header headerText={"Dashboard"} titleStyle={TEXT} />
+      <Header headerTx={"homeScreen.header"} titleStyle={TEXT} />
       <View style={CONTAINER}>
         <TextInput
-          placeholder={"Enter country"}
+          placeholder={translate("placeHolder.homePlaceHolder")}
           style={INPUT}
           value={country}
           onChangeText={(text) => onChangeValue(text)}
           onSubmitEditing={() => Keyboard.dismiss}
         />
         <Button
-          text={"Submit"}
+          tx={"button.submit"}
           textStyle={TEXT}
           style={[BUTTON, { opacity: country == "" ? 0.5 : 1 }]}
           onPress={onSubmit}

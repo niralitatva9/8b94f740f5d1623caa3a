@@ -4,8 +4,23 @@
     "cancel": "Cancel",
     "back": "Back"
   },
+  "button": {
+    "submit": "Submit",
+    "capitalWeather": "Capital Weather",
+    "back": "Back"
+  },
+  "placeHolder":{
+    "homePlaceHolder":"Enter country"
+  },
   "errors": {
-    "invalidEmail": "Invalid email address."
+    "invalid": "No Record Found!"
+  },
+  "homeScreen": {
+    "header": "Dashboard"
+  },
+  "CountryDetailsScreen": {
+    "header": "CountryDetails Screen",
+    "WeatherDetails":"Weather Details"
   },
   "welcomeScreen": {
     "poweredBy": "POWERED BY BOWSER",
